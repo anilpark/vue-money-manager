@@ -1,0 +1,39 @@
+<template>
+    <div>
+        <div class="page-title">
+            <h3>Категории</h3>
+        </div>
+        <section>
+            <div class="row">
+                <CreateCategory @created="addNewCategory"/>
+
+                <EditCategory/>
+            </div>
+        </section>
+    </div>
+</template>
+
+<script>
+    import CreateCategory from "../components/CreateCategory";
+    import EditCategory from "../components/EditCategory";
+    export default {
+        name: "Categories",
+        data: () => ({
+            categories: []
+        }),
+        methods: {
+            addNewCategory(newCat){
+                this.categories.push(newCat)
+                console.log(this.categories)
+            }
+        },
+        components:{
+            CreateCategory,
+            EditCategory
+        }
+    }
+</script>
+
+<style scoped>
+
+</style>
