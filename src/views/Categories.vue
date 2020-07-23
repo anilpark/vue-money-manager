@@ -7,7 +7,6 @@
             <Loader v-if="loading"/>
             <div class="row" v-else>
                 <CreateCategory @created="addNewCategory"/>
-
                 <EditCategory
                         v-if="categories.length"
                         :categories="categories" @updated="updateCategories"

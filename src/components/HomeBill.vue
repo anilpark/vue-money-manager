@@ -30,7 +30,6 @@
         },
         methods:{
             getCurrency(currency){
-                console.log(Math.floor(this.base * this.rates[currency]))
                 return Math.floor(this.base * this.rates[currency])
             }
         }
