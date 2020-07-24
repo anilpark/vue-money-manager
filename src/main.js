@@ -10,6 +10,7 @@ import currencyFilter from "./filters/currency.filter";
 import tooltipDirective from "./directives/tooltip.directive"
 import messagePlugin from '@/utils/message.plagin'
 import Loader from "./components/app/Loader";
+import Paginate from 'vuejs-paginate'
 
 import firebase from "firebase/app";
 import 'firebase/auth'
@@ -21,6 +22,7 @@ Vue.config.productionTip = false
 
 
 Vue.component('Loader', Loader)
+Vue.component('Paginate', Paginate)
 Vue.use(messagePlugin, {})
 Vue.use(Vuelidate)
 Vue.directive('tooltip', tooltipDirective)
