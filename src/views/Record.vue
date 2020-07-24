@@ -11,7 +11,7 @@
 
         <form class="form" v-else @submit.prevent="submitHandler">
             <div class="input-field" >
-                <select ref="select">
+                <select ref="select" v-model="category">
                     <option
                             v-for="c in categories"
                             :key="c.id"
